@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Header</title>
+    <script src="" defer></script>
+    <link rel="stylesheet" href="header.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      .video-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: brightness(45%);
+      }
+
+      iframe {
+        z-index: 50;
+        width: 100vw;
+        height: 150vh;
+        position: relative;
+
+        bottom: -10vh;
+        border: none;
+        transform: translateY(-5%);
+        pointer-events: none;
+      }
+    </style>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+       
+          <img
+            src="Logo.png"
+            alt="Logo"
+            id="droneVision"
+            style="
+              width: 200px;
+              height: auto;
+              margin-top: -4px;
+              margin-left: 30px;
+            "
+          />
+        
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <div class="drone-box">
+              <li class="nav-item"></li>
+            </div>
+            <li class="nav-item"></li>
+            <li class="nav-item"></li>
+          </ul>
+          <style>
+            .login-box {
+              text-align: right;
+            }
+
+            .navbar {
+              background-color: white !important;
+              border-color: #013980;
+              border-width: 2px;
+            }
+          </style>
+
+          <div class="login-box">
+            <button
+              class="about-us-button"
+              id="about-us-button"
+              onclick="window.location.href = 'Login/Login.html';"
+            >
+              GET STARTED
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="video-container">
+      <iframe
+        src="https://www.youtube.com/embed/SeBoS1yCyd0?autoplay=1&mute=1&controls=0&showinfo=0&modestbranding=1&rel=0&loop=1&playlist=SeBoS1yCyd0&disablekb=1&iv_load_policy=3&color=white"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>

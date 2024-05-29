@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Goal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../Header.css" />
+    <script src="goal.js" defer ></script>
+  </head>
+  <body>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        background-color: #8fa08c;
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .nav-items a {
+        text-decoration: none;
+        margin: 0 1em;
+        color: black;
+      }
+
+      .active,
+      .logout {
+        color: #5c832f;
+      }
+
+      .logout {
+        text-decoration: none;
+      }
+
+      .container {
+        background-color: #8fa08c;
+        padding: 3%;
+        width: 87vw;
+        height: 35vw;
+        max-width: 1000px;
+        max-height: 1000px;
+        margin: 2em auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .save {
+        background-color: #9db89d;
+      }
+
+      .invest {
+        background-color: #8db88d;
+      }
+
+      .use {
+        background-color: #7da07d;
+      }
+
+      .buttons button:hover {
+        opacity: 0.9;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      .goal-settings > div {
+        margin-bottom: 10px;
+      }
+
+      .percentage-input {
+        padding: 0.5em;
+        margin-right: 0.5em;
+        border: 1px solid #888;
+        border-radius: 5px;
+        width: 60px;
+      }
+
+      .goal-btn {
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .save {
+        background-color: #9db89d;
+      }
+      .invest {
+        background-color: #8db88d;
+      }
+      .use {
+        background-color: #7da07d;
+      }
+
+      .goal-result {
+        margin-top: 20px;
+        padding: 0.5em;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid #888;
+        display: inline-block;
+        width: auto;
+      }
+
+      .goal-option {
+        margin-bottom: 20px;
+      }
+
+      .goal-option input {
+        margin-bottom: 10px;
+      }
+      .header-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      .goal-settings {
+        text-align: center;
+      }
+
+      .goal-settings > div {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      .goal-settings > div:last-child {
+        margin-right: 0;
+      }
+
+      .percentage-input {
+        padding: 0.5em;
+        margin-right: 0.5em;
+        border: 1px solid #888;
+        border-radius: 5px;
+        width: 80px;
+        vertical-align: middle;
+      }
+
+      .goal-btn {
+        padding: 0.5em 1em;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        vertical-align: middle;
+      }
+    </style>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a href="../HomePage/HomePage.html">
+          <img
+            src="../Logo.png"
+            alt="Logo"
+            id="droneVision"
+            style="width: 200px; height: auto; margin-top: -4px; margin-left: 30px;"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <div class="drone-box">
+              <li class="nav-item">
+                <a class="nav-link" id="drone" href="goals.html">Goals</a>
+              </li>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" id="foto" href="../Income/Income.html">Income</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" href="../Expenses/expenses.html">Expenses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" onclick="logout()" href="../index.html">Logout</a>
+            </li>
+          </ul>
+          <div class="login-box">
+            <button
+              class="pricing-button"
+              id="pricing-button"
+              onclick="location.href='../FAQ.html';"
+            >
+              FAQ
+            </button>
+            <button
+              class="about-us-button"
+              id="about-us-button"
+              onclick="location.href='../aboutUs.html';"
+            >
+              About us
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <br /><br /><br />
+    <div class="container">
+      <div class="goals">
+        <div class="header-section">
+          <h3>
+            Choose your goal
+            <p>
+              Here, you can articulate your <br />aspiration and ambitions to
+              <br />
+              pave the way for a brighter <br />
+              future.
+            </p>
+          </h3>
+          <div id="total-amount" class="goal-result"></div>
+        </div>
+      <div class="goal-settings">
+        <div>
+          <input type="number" id="save-percentage" placeholder="Enter %" class="percentage-input" />
+          <button class="goal-btn save" onclick="submitGoal('save')">SAVE for this month</button>
+        </div>
+        <div>
+          <input type="number" id="invest-percentage" placeholder="Enter %" class="percentage-input" />
+          <button class="goal-btn invest" onclick="submitGoal('invest')">INVEST for this month</button>
+        </div>
+        <div>
+          <input type="number" id="use-percentage" placeholder="Enter %" class="percentage-input" />
+          <button class="goal-btn use" onclick="submitGoal('use')">USE for this month</button>
+        </div>
+      </div>
+      <div id="goal-result"></div>
+
+      <br>
+      <h4>Current Goals</h4>
+      <div id="current-goals" class="current-goals"></div>
+      <br>
+      </div>
+    </div>
+  </body>
+</html>

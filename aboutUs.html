@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+    <link rel="stylesheet" href="header.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .about-section {
+        background-color: #8fa08c;
+        margin: 20px 60px;
+        padding: 40px;
+        border-radius: 25px;
+        color: black;
+        line-height: 1.6;
+      }
+
+      .about-section h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .about-section p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    </style>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a href="HomePage/HomePage.html">
+          <img
+            src="Logo.png"
+            alt="Logo"
+            id="droneVision"
+            style="
+              width: 200px;
+              height: auto;
+              margin-top: -4px;
+              margin-left: 30px;
+            "
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <div class="drone-box">
+              <li class="nav-item">
+                <a class="nav-link" id="drone" href="Goal/goals.html">Goals</a>
+              </li>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" id="foto" href="Income/Income.html">Income</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" href="Expenses/expenses.html">Expenses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" onclick="logout()" href="index.html">Logout</a>
+            </li>
+          </ul>
+          <div class="login-box">
+            <button
+              class="pricing-button"
+              id="pricing-button"
+              onclick="location.href='FAQ.html';"
+            >
+              FAQ
+            </button>
+            <button
+              class="about-us-button"
+              id="about-us-button"
+              onclick="location.href='aboutUs.html';"
+            >
+              About us
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <br /><br /><br /><br />
+
+    <main>
+      <section class="about-section">
+        <div class="container">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our budget calculator web application project! As
+            students embarking on this journey, we recognize the pressing need
+            for a robust financial management tool tailored specifically to our
+            unique circumstances. Our project aims to address this gap in the
+            market by offering a comprehensive solution designed to empower
+            fellow students in navigating their finances with confidence and
+            control.
+          </p>
+          <p>
+            Our vision for this web application is rooted in the understanding
+            of the challenges that accompany student life, from managing tuition
+            fees to balancing daily expenses. With this in mind, we have crafted
+            a user-friendly platform that not only tracks spending but also
+            provides valuable insights and resources to aid in financial
+            decision-making.
+          </p>
+          <p>
+            In essence, our budget calculator web application project is more
+            than just a tool; it's a commitment to supporting our fellow
+            students on their journey towards financial independence and
+            success. Together, let's take control of our finances and pave the
+            way for a brighter tomorrow!
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+          <p>&copy; 2024 Budget Calculator. All rights reserved.</p>
+      </div>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("token")
+      localStorage.removeItem("user")
+      localStorage.removeItem("roles")
+    }
+    </script>
+    
+  </body>
+</html>

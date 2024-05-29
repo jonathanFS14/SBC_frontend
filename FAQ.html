@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAQ</title>
+    <link rel="stylesheet" href="header.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+
+      .about-section {
+        background-color: #8fa08c;
+        margin: 20px 60px;
+        padding: 80px 50px;
+        border-radius: 25px;
+        color: black;
+      }
+
+      .about-section h2 {
+        text-align: left;
+      }
+
+      .faq {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .question {
+        background-color: #8fa08c;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .question h3 {
+        margin-top: 0;
+      }
+
+      .question p {
+        margin-bottom: 0;
+        color: rgb(7, 53, 23);
+        font-size: 16px;
+      }
+
+      .contact-form-container {
+        background-color: #8fa08c;
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px 60px;
+      }
+
+      .contact-form {
+        background-color: #8fa08c;
+        padding: 20px;
+        border-radius: 10px;
+        color: black;
+      }
+
+      .contact-form h2 {
+        margin-top: 0;
+      }
+
+      .contact-form label {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form textarea {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .contact-form input[type="submit"] {
+        background-color: #6c7d68;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .contact-form input[type="submit"]:hover {
+        background-color: #5a6758;
+      }
+    </style>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+        <a href="HomePage/HomePage.html">
+          <img
+            src="Logo.png"
+            alt="Logo"
+            id="droneVision"
+            style="
+              width: 200px;
+              height: auto;
+              margin-top: -4px;
+              margin-left: 30px;
+            "
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <div class="drone-box">
+              <li class="nav-item">
+                <a class="nav-link" id="drone" href="Goal/goals.html">Goals</a>
+              </li>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" id="foto" href="Income/Income.html">Income</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" href="Expenses/expenses.html">Expenses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="video" onclick="logout()" href="index.html">Logout</a>
+            </li>
+          </ul>
+          <div class="login-box">
+            <button
+              class="pricing-button"
+              id="pricing-button"
+              onclick="location.href='FAQ.html';"
+            >
+              FAQ
+            </button>
+            <button
+              class="about-us-button"
+              id="about-us-button"
+              onclick="location.href='aboutUs.html';"
+            >
+              About us
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <br />
+    <br />
+
+    <main>
+      <section class="about-section">
+        <div class="container">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq">
+            <div class="question">
+              <h3>1. How does this budget calculator web application work?</h3>
+              <p>
+                Our application allows users to input their income and expenses,
+                and then manage their budgets based on this data.
+              </p>
+            </div>
+            <div class="question">
+              <h3>2. What does this application track?</h3>
+              <p>
+                Our application tracks your financial data including income,
+                expenses, and savings. It also analyzes your spending by
+                categories and helps you optimize your budget.
+              </p>
+            </div>
+            <div class="question">
+              <h3>3. What are the benefits of budget calculation?</h3>
+              <p>
+                Budget calculation helps you understand your financial
+                situation, keep your spending under control, and save money.
+                With this application, setting and reaching your financial goals
+                will be easier.
+              </p>
+            </div>
+            <div class="question">
+              <h3>4. Is this application free?</h3>
+              <p>
+                Yes, our application is completely free and does not charge any
+                fees.
+              </p>
+            </div>
+            <div class="question">
+              <h3>5. On which devices can it be used?</h3>
+              <p>
+                Our website can be accessed on any browser. You can use it on
+                your computer, tablet, or smartphone.
+              </p>
+            </div>
+            <div class="question">
+              <h3>6. What measures do you take for privacy and security?</h3>
+              <p>
+                The privacy and security of our users are important to us. All
+                your data is securely stored and no personal information is
+                shared with third parties.
+              </p>
+            </div>
+            <div class="question">
+              <h3>7. In which countries is this application available?</h3>
+              <p>
+                Our website is available worldwide. Since financial management
+                needs are universal, our application is not limited to any
+                specific country.
+              </p>
+            </div>
+            <div class="question">
+              <h3>8. Do you have customer support?</h3>
+              <p>
+                Yes, if you have any questions or feedback, you can reach us
+                through our <a href="#">contact form</a>. Our customer service
+                team will be happy to assist you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      function logout() {
+        localStorage.removeItem("token")
+        localStorage.removeItem("user")
+        localStorage.removeItem("roles")
+      }
+      </script>
+  </body>
+</html>
